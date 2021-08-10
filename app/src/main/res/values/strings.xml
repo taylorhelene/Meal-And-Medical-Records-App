@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Diet Core</string>
+    <string name="title_activity_homepage">Homepage</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="title_morning">Good Morning</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="hint">
+        <font size="10">Did you have your blood pressure measurement today?</font>
+    </string>
+    <string name="hint3">
+        <font size="10">Did you have an insulin injection today?</font>
+    </string>
+    <string name="hint4">
+        <font size="12">Are you exhibiting any symptoms today?</font>
+    </string>
+</resources>

@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".Track">
+
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:orientation="vertical">
+
+       <TextView
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_gravity="center|center_horizontal"
+           android:gravity="center|center_horizontal"
+           android:text="Today"
+           android:padding="10dp"
+           android:background="@drawable/border"/>
+       <RelativeLayout
+           android:layout_width="match_parent"
+           android:layout_height="match_parent">
+       <androidx.cardview.widget.CardView
+           android:id="@+id/card"
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+          android:layout_centerInParent="true"
+           app:cardCornerRadius="5dp"
+           android:padding="10dp"
+           android:layout_margin="10dp">
+
+
+       <ScrollView
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+           <ListView
+               android:layout_gravity="center_horizontal"
+               android:id="@+id/listview1"
+               android:layout_width="wrap_content"
+               android:layout_height="500dp"
+               android:layout_marginLeft="5dp">
+
+           </ListView>
+<com.airbnb.lottie.LottieAnimationView
+    android:id="@+id/lottie"
+    android:layout_width="200dp"
+    android:layout_height="200dp"
+    android:layout_gravity="center_horizontal"
+    app:lottie_autoPlay="true"
+    app:lottie_enableMergePathsForKitKatAndAbove="true"
+    app:lottie_loop="true"
+    app:lottie_rawRes="@raw/emptystate"
+    android:visibility="gone"/>
+       <ImageView
+           android:id="@+id/emptyitem"
+           android:layout_margin="5dp"
+           android:layout_width="100dp"
+           android:layout_height="20dp"
+           android:layout_gravity="center_horizontal"
+           android:background="@drawable/emptyitem"
+           android:visibility="gone"/>
+
+    </LinearLayout>
+       </ScrollView>
+
+       </androidx.cardview.widget.CardView>
+       </RelativeLayout>
+   </LinearLayout>
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+
+    <LinearLayout
+    android:id="@+id/lay2"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_above="@id/lay3"
+        android:layout_marginTop="-20dp"
+    android:layout_alignParentRight="true"
+    android:visibility="invisible">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Add meal"
+        android:textColor="@color/colorBlack" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginStart="5dp"
+
+            android:layout_marginEnd="5dp"
+            android:layout_marginRight="5dp"
+            android:scaleType="center"
+            android:src="@drawable/applebite"
+            app:backgroundTint="@color/colorblue"
+            app:fabSize="mini" />
+</LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/lay3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_above="@id/fab"
+            android:layout_marginTop="-20dp"
+            android:layout_alignParentRight="true"
+            android:visibility="invisible">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Update to calendar"
+                android:textColor="@color/colorBlack" />
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/fabupdate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_marginStart="5dp"
+
+                android:layout_marginEnd="5dp"
+                android:layout_marginRight="5dp"
+                android:scaleType="center"
+                android:src="@android:drawable/ic_menu_my_calendar"
+                app:backgroundTint="@color/colorblue"
+                app:fabSize="mini" />
+        </LinearLayout>
+           <com.google.android.material.floatingactionbutton.FloatingActionButton
+               android:id="@+id/fab"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_alignParentLeft="false"
+               android:layout_alignParentRight="true"
+               android:layout_alignParentBottom="true"
+               android:layout_marginStart="5dp"
+               android:layout_marginLeft="5dp"
+               android:layout_marginTop="5dp"
+               android:layout_marginEnd="5dp"
+               android:layout_marginRight="5dp"
+               android:layout_marginBottom="5dp"
+               android:scaleType="center"
+               android:src="@drawable/btn_add"
+               app:backgroundTint="@android:color/black"
+               app:rippleColor="@color/colorWhite"/>
+
+           <com.google.android.material.floatingactionbutton.FloatingActionButton
+               android:id="@+id/fab4"
+               android:visibility="invisible"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_alignParentLeft="false"
+               android:layout_alignParentRight="true"
+               android:layout_alignParentBottom="true"
+               android:layout_marginStart="5dp"
+               android:layout_marginLeft="5dp"
+               android:layout_marginTop="-20dp"
+               android:layout_marginEnd="5dp"
+               android:layout_marginRight="5dp"
+               android:layout_marginBottom="5dp"
+               android:scaleType="center"
+               android:src="@drawable/btn_delete"
+               app:backgroundTint="@android:color/black"
+               app:rippleColor="@color/colorWhite"/>
+
+       </RelativeLayout>
+
+
+</FrameLayout>
